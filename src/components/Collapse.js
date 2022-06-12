@@ -1,13 +1,13 @@
 import React from "react";
 
 const Collapse = (props) => {
-  console.log();
+  console.log(props.children);
   return (
     <div>
       <a
-        class="btn btn-primary"
+        className="btn btn-primary"
         data-bs-toggle="collapse"
-        href="#collapseExample"
+        href={"#".concat(props.href)}
         role="button"
         aria-expanded="false"
         aria-controls="collapseExample"
@@ -15,8 +15,8 @@ const Collapse = (props) => {
         Link with href
       </a>
 
-      <div class="collapse" id="collapseExample">
-        Linke tıklanınca açılan içerik
+      <div className="collapse" id={props.href}>
+        {props.children}
       </div>
     </div>
   );

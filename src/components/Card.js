@@ -1,7 +1,7 @@
 import React from "react";
 
 const Card = (props) => {
-  console.log();
+  //   console.log();
   return (
     <div className="card">
       <img src={props.image} className="card-img-top" alt="..." />
