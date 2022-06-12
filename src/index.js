@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//JSX
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const names = ["mihri", "erdijx", "bedi"];
+const buttonValue = "My Button";
+
+function App() {
+  return (
+    <div>
+      {names.map((name) => (
+        <h1>{name}</h1>
+      ))}
+      <button
+        type="button"
+        style={{
+          padding: "10px",
+          color: "grey",
+          backgroundColor: "pink",
+          border: " 2px solid green",
+        }}
+      >
+        {buttonValue}
+      </button>
+    </div>
+  );
+}
+
+ReactDom.render(<App />, document.getElementById("root"));
